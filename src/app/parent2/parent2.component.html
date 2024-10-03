@@ -1,0 +1,15 @@
+<app-child2></app-child2>
+<button (click)="getChildData()">Get Data from Child</button>
+<h2>Courses</h2>
+<div class="card-container">
+    <div *ngFor="let course of childData">
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">{{ course.title }}</div>
+            <div class="card-body text-success">
+                <h5 class="card-title">{{ course.cardTitle}}</h5>
+                <p class="card-text">{{ course.description }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">last updated at {{ course.lastUpdated }}</div>
+        </div>
+    </div>
+</div>
